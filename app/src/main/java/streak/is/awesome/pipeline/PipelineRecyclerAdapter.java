@@ -1,9 +1,7 @@
-package streak.is.awesome.mail;
+package streak.is.awesome.pipeline;
 
 import android.content.Context;
-import android.content.Intent;
 import android.support.v7.widget.RecyclerView;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -15,23 +13,22 @@ import java.util.List;
 import streak.is.awesome.R;
 
 /**
- * Created by sultankhan on 10/14/15.
+ * Created by sultankhan on 10/15/15.
  */
-
-public class MailRecyclerAdapter extends RecyclerView.Adapter<MailRecyclerAdapter.MyViewHolder> {
+public class PipelineRecyclerAdapter extends RecyclerView.Adapter<PipelineRecyclerAdapter.MyViewHolder>{
 
     // emptyList takes care of null pointer exception
-    List<MailRecyclerInfo> data = Collections.emptyList();
+    List<PipelineRecyclerInfo> data = Collections.emptyList();
     LayoutInflater inflator;
     Context context;
 
-    public MailRecyclerAdapter(Context context, List<MailRecyclerInfo> data) {
+    public PipelineRecyclerAdapter(Context context, List<PipelineRecyclerInfo> data) {
         this.context = context;
         inflator = LayoutInflater.from(context);
         this.data = data;
     }
 
-    public void addRow(MailRecyclerInfo row) {
+    public void addRow(PipelineRecyclerInfo row){
         data.add(row);
         notifyItemInserted(getItemCount() - 1);
     }
@@ -45,7 +42,7 @@ public class MailRecyclerAdapter extends RecyclerView.Adapter<MailRecyclerAdapte
     @Override
     public MyViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
 
-        final View view = inflator.inflate(R.layout.row_mail_recycler_view, parent, false);
+        final View view = inflator.inflate(R.layout.row_pipeline_recycler_view, parent, false);
         MyViewHolder holder = new MyViewHolder(view, new MyViewHolder.MyViewHolderClicks() {
             public void RowClick(View caller, int position) {
 
@@ -61,7 +58,7 @@ public class MailRecyclerAdapter extends RecyclerView.Adapter<MailRecyclerAdapte
     public void onBindViewHolder(MyViewHolder holder, int position) {
 
         // This gives us current information list object
-        MailRecyclerInfo current = data.get(position);
+        PipelineRecyclerInfo current = data.get(position);
 
         holder.sender.setText(current.getSender());
         holder.subject.setText(current.getSubject());
@@ -98,14 +95,14 @@ public class MailRecyclerAdapter extends RecyclerView.Adapter<MailRecyclerAdapte
 
         @Override
         public void onClick(View v) {
-            switch (v.getId()) {
+            switch(v.getId()) {
                 default:
                     mListener.RowClick(v, getAdapterPosition());
                     break;
             }
         }
 
-        public interface MyViewHolderClicks {
+        public  interface MyViewHolderClicks {
             void RowClick(View caller, int position);
         }
     }

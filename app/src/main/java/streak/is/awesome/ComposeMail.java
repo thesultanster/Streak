@@ -46,6 +46,7 @@ public class ComposeMail extends AppCompatActivity {
             case R.id.action_send_email:
                 return true;
             default:
+                onBackPressed();
                 return super.onOptionsItemSelected(menuItem);
         }
     }

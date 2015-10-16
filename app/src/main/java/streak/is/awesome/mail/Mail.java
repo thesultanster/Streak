@@ -33,26 +33,23 @@ public class Mail extends NavigationDrawerFramework {
         recyclerView.setAdapter(adapter);
         recyclerView.setLayoutManager(new LinearLayoutManager(Mail.this));
 
-        adapter.addRow(new MailRecyclerInfo("me, Sultan", "Quick Update", "Yo whats going on man hows life and hows everyone"));
-        adapter.addRow(new MailRecyclerInfo("me, Sultan", "Quick Update", "Yo whats going on man hows life and hows everyone"));
-        adapter.addRow(new MailRecyclerInfo("me, Sultan", "Quick Update", "Yo whats going on man hows life and hows everyone"));
-        adapter.addRow(new MailRecyclerInfo("me, Sultan", "Quick Update","Yo whats going on man hows life and hows everyone"));
-        adapter.addRow(new MailRecyclerInfo("me, Sultan", "Quick Update", "Yo whats going on man hows life and hows everyone"));
-        adapter.addRow(new MailRecyclerInfo("me, Sultan", "Quick Update", "Yo whats going on man hows life and hows everyone"));
-        adapter.addRow(new MailRecyclerInfo("me, Sultan", "Quick Update", "Yo whats going on man hows life and hows everyone"));
-        adapter.addRow(new MailRecyclerInfo("me, Sultan", "Quick Update","Yo whats going on man hows life and hows everyone"));
-        adapter.addRow(new MailRecyclerInfo("me, Sultan", "Quick Update", "Yo whats going on man hows life and hows everyone"));
-        adapter.addRow(new MailRecyclerInfo("me, Sultan", "Quick Update", "Yo whats going on man hows life and hows everyone"));
-        adapter.addRow(new MailRecyclerInfo("me, Sultan", "Quick Update", "Yo whats going on man hows life and hows everyone"));
-        adapter.addRow(new MailRecyclerInfo("me, Sultan", "Quick Update", "Yo whats going on man hows life and hows everyone"));
-        adapter.addRow(new MailRecyclerInfo("me, Sultan", "Quick Update", "Yo whats going on man hows life and hows everyone"));
-        adapter.addRow(new MailRecyclerInfo("me, Sultan", "Quick Update","Yo whats going on man hows life and hows everyone"));
-        adapter.addRow(new MailRecyclerInfo("me, Sultan", "Quick Update", "Yo whats going on man hows life and hows everyone"));
-        adapter.addRow(new MailRecyclerInfo("me, Sultan", "Quick Update","Yo whats going on man hows life and hows everyone"));
-        adapter.addRow(new MailRecyclerInfo("me, Sultan", "Quick Update", "Yo whats going on man hows life and hows everyone"));
-        adapter.addRow(new MailRecyclerInfo("me, Sultan", "Quick Update","Yo whats going on man hows life and hows everyone"));
-        adapter.addRow(new MailRecyclerInfo("me, Sultan", "Quick Update", "Yo whats going on man hows life and hows everyone"));
-        adapter.addRow(new MailRecyclerInfo("me, Sultan", "Quick Update","Yo whats going on man hows life and hows everyone"));
+        adapter.addRow(new MailRecyclerInfo("me, Streak", "Streak Android Position", "Show us how serious you are for this position"));
+        adapter.addRow(new MailRecyclerInfo("me, Streak", "Streak Android Position", "Show us how serious you are for this position"));
+        adapter.addRow(new MailRecyclerInfo("me, Streak", "Streak Android Position", "Show us how serious you are for this position"));
+        adapter.addRow(new MailRecyclerInfo("me, Streak", "Streak Android Position", "Show us how serious you are for this position"));
+        adapter.addRow(new MailRecyclerInfo("me, Streak", "Streak Android Position", "Show us how serious you are for this position"));
+        adapter.addRow(new MailRecyclerInfo("me, Streak", "Streak Android Position", "Show us how serious you are for this position"));
+        adapter.addRow(new MailRecyclerInfo("me, Streak", "Streak Android Position", "Show us how serious you are for this position"));
+        adapter.addRow(new MailRecyclerInfo("me, Streak", "Streak Android Position", "Show us how serious you are for this position"));
+        adapter.addRow(new MailRecyclerInfo("me, Streak", "Streak Android Position", "Show us how serious you are for this position"));
+        adapter.addRow(new MailRecyclerInfo("me, Streak", "Streak Android Position", "Show us how serious you are for this position"));
+        adapter.addRow(new MailRecyclerInfo("me, Streak", "Streak Android Position", "Show us how serious you are for this position"));
+        adapter.addRow(new MailRecyclerInfo("me, Streak", "Streak Android Position", "Show us how serious you are for this position"));
+        adapter.addRow(new MailRecyclerInfo("me, Streak", "Streak Android Position", "Show us how serious you are for this position"));
+        adapter.addRow(new MailRecyclerInfo("me, Streak", "Streak Android Position", "Show us how serious you are for this position"));
+        adapter.addRow(new MailRecyclerInfo("me, Streak", "Streak Android Position", "Show us how serious you are for this position"));
+        adapter.addRow(new MailRecyclerInfo("me, Streak", "Streak Android Position", "Show us how serious you are for this position"));
+
 
         fab.setOnClickListener(new View.OnClickListener() {
             @Override

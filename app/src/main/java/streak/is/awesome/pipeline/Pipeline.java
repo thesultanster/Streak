@@ -1,5 +1,6 @@
 package streak.is.awesome.pipeline;
 
+import android.graphics.Color;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.design.widget.TabLayout;
@@ -11,6 +12,7 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -21,6 +23,8 @@ import android.widget.FrameLayout;
 import android.widget.TextView;
 
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
 
 import streak.is.awesome.R;
 import streak.is.awesome.util.NavigationDrawerFramework;
@@ -38,7 +42,9 @@ public class Pipeline extends NavigationDrawerFramework {
      */
     private ViewPager mViewPager;
     private SlidingTabLayout mTab;
-    ArrayList<String> names;
+    ArrayList<String> stages;
+    ArrayList<Integer> colors;
+
 
 
     @Override
@@ -46,24 +52,73 @@ public class Pipeline extends NavigationDrawerFramework {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_pipeline);
 
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
 
         mTab = (SlidingTabLayout) findViewById(R.id.tab);
 
-        names = new ArrayList<>();
-        names.add("Lead");
-        names.add("Contacted");
-        names.add("Pitched");
-        names.add("Demo");
-        names.add("Negotiating");
-        names.add("Closed - Lost");
-        names.add("Closed - Won");
+        // Custom data ====================================================
+        stages = new ArrayList<>();
+        stages.add("Lead");
+        stages.add("Contacted");
+        stages.add("Pitched");
+        stages.add("Demo");
+        stages.add("Negotiating");
+        stages.add("Closed - Lost");
+        stages.add("Closed - Won");
+
+        Map< Integer, ArrayList<String> > allBoxes = new HashMap<>();
+        ArrayList<String> boxes = new ArrayList<String>() {{
+            add("Anytime Fitness");
+            add("LA Fitness");
+            add("24 Hour Fitness");
+        }};
+
+        allBoxes.put(0, boxes);
+
+        boxes = new ArrayList<String>() {{
+            add("Canyon Crest Recreation");
+            add("Fitness for 10");
+        }};
+
+        allBoxes.put(1,boxes);
+
+        boxes = new ArrayList<String>() {{
+            add("UC Rec Center");
+        }};
+
+        allBoxes.put(2,boxes);
+        boxes = new ArrayList<String>() {{
+            add("Riverside Crossfit");
+        }};
+        allBoxes.put(3,boxes);
+        boxes = new ArrayList<String>() {{
+            add("Kings Gym");
+        }};
+        allBoxes.put(4,boxes);
+        boxes = new ArrayList<String>() {{
+            add("Get Swoll Gym");
+        }};
+        allBoxes.put(5,boxes);
+        boxes = new ArrayList<String>() {{
+            add("Shredded");
+        }};
+        allBoxes.put(6,boxes);
+
+        colors = new ArrayList<>();
+        colors.add(Color.parseColor("#F44336"));
+        colors.add(Color.parseColor("#FF9800"));
+        colors.add(Color.parseColor("#8BC34A"));
+        colors.add(Color.parseColor("#388E3C"));
+        colors.add(Color.parseColor("#03A9F4"));
+        colors.add(Color.parseColor("#1976D2"));
+        colors.add(Color.parseColor("#4CAF50"));
+
+
+        // =================================================================
 
 
         // Set up the ViewPager with the sections adapter.
         mViewPager = (ViewPager) findViewById(R.id.container);
-        mViewPager.setAdapter(new PipelinePagerAdapter(getSupportFragmentManager(), Pipeline.this, names));
+        mViewPager.setAdapter(new PipelinePagerAdapter(getSupportFragmentManager(), stages, allBoxes));
         mTab.setViewPager(mViewPager);
 
         //setting indicator and divider color
@@ -73,112 +128,39 @@ public class Pipeline extends NavigationDrawerFramework {
             public int getIndicatorColor(int position) {
                 return getResources().getColor(R.color.colorAccent);    //define any color in xml resources and set it here, I have used white
             }
+
+
+        });
+
+        mTab.setOnPageChangeListener(new ViewPager.OnPageChangeListener() {
+            @Override
+            public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
+
+            }
+
+            @Override
+            public void onPageSelected(int position) {
+                mTab.setBackgroundColor(colors.get(position));
+
+            }
+
+            @Override
+            public void onPageScrollStateChanged(int state) {
+
+
+            }
         });
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
+
             }
         });
 
     }
 
 
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_pipeline, menu);
-        return true;
-    }
 
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
-
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
-        }
-
-        return super.onOptionsItemSelected(item);
-    }
-
-
-    /**
-     * A {@link FragmentPagerAdapter} that returns a fragment corresponding to
-     * one of the sections/tabs/pages.
-     */
-    public class SectionsPagerAdapter extends FragmentPagerAdapter {
-
-        public SectionsPagerAdapter(FragmentManager fm) {
-            super(fm);
-        }
-
-        @Override
-        public Fragment getItem(int position) {
-            // getItem is called to instantiate the fragment for the given page.
-            // Return a PlaceholderFragment (defined as a static inner class below).
-            return PlaceholderFragment.newInstance(position + 1);
-        }
-
-        @Override
-        public int getCount() {
-            // Show 3 total pages.
-            return 3;
-        }
-
-        @Override
-        public CharSequence getPageTitle(int position) {
-            switch (position) {
-                case 0:
-                    return "SECTION 1";
-                case 1:
-                    return "SECTION 2";
-                case 2:
-                    return "SECTION 3";
-            }
-            return null;
-        }
-    }
-
-    /**
-     * A placeholder fragment containing a simple view.
-     */
-    public static class PlaceholderFragment extends Fragment {
-        /**
-         * The fragment argument representing the section number for this
-         * fragment.
-         */
-        private static final String ARG_SECTION_NUMBER = "section_number";
-
-        /**
-         * Returns a new instance of this fragment for the given section
-         * number.
-         */
-        public static PlaceholderFragment newInstance(int sectionNumber) {
-            PlaceholderFragment fragment = new PlaceholderFragment();
-            Bundle args = new Bundle();
-            args.putInt(ARG_SECTION_NUMBER, sectionNumber);
-            fragment.setArguments(args);
-            return fragment;
-        }
-
-        public PlaceholderFragment() {
-        }
-
-        @Override
-        public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                                 Bundle savedInstanceState) {
-            View rootView = inflater.inflate(R.layout.fragment_pipeline, container, false);
-            TextView textView = (TextView) rootView.findViewById(R.id.section_label);
-            textView.setText(getString(R.string.section_format, getArguments().getInt(ARG_SECTION_NUMBER)));
-            return rootView;
-        }
-    }
 }
