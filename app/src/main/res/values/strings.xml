@@ -5,4 +5,42 @@
     <string name="close">Close</string>
     <string name="title_activity_pipeline">Pipeline</string>
     <string name="section_format">Hello World from section: %1$d</string>
+    <string name="title_activity_view_mail">Why Hire Me</string>
+    <string name="large_text">
+        <b>Hello!</b>\n
+        The following Android App showcases my ability as an Android developer and UI/UX designer.
+        My expertise in this field ensures the creation of a beautiful and functional app.
+        I have extensive experience in fast paced environments that require efficient development methodologies.
+        The following projects bring light to the various apps I have created.
+    </string>
+
+
+    <string name="virus">
+        First place for Cisco at SBHacks. Virus is a fast-paced collective game of zombie tag.
+        A certain amount of people in the network are infected.
+        Their goal is to run around and tag healthy people by getting in a close proximity to them. If you get tagged, you are now infected as well.
+        Features include real-time Wi-Fi tracking within 4ft, massive scalability of users, and real-time database. 
+    </string>
+
+    <string name="storify">
+        Crowd Favorite Award at Cutie Hacks. Storify allows users to anonymously finish each other\'s stories.
+        You start your first sentence and another person continues it, and so on so forth.
+        \n
+    </string>
+
+     <string name="smartgym">
+        First Place for AngelHacks. Smart Gym is an IoT device that automatically tracks workouts
+        The app showcases real time data, uses accelerometer to count reps, and builds workouts
+        \n
+    </string>
+
+    <string name="title_smartgym"><a href="http://devpost.com/software/smart-machine"><b>Smart Gym</b></a>\n</string>
+
+    <string name="title_storify"><a href="http://devpost.com/software/storify"><b>Storify</b></a>\n</string>
+
+    <string name="title_virus"><a href="http://sbhacks.devpost.com/submissions/32408-virus"><b>Virus</b></a>\n</string>
+
+
+
+
 </resources>

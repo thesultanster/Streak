@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:showIn="@layout/activity_view_mail" android:layout_width="match_parent"
+    android:layout_height="match_parent" tools:context="streak.is.awesome.ViewMail">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/text_margin"
+            android:text="@string/large_text" />
+
+        <TextView
+            android:id="@+id/smartgym"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/text_margin"
+            android:text="@string/title_smartgym"
+            android:textSize="15sp"
+            />
+
+        <TextView
+            android:id="@+id/psmartgym"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/text_margin"
+            android:text="@string/smartgym"
+            android:textSize="15sp"
+            />
+
+        <TextView
+            android:id="@+id/virus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/text_margin"
+            android:text="@string/title_virus"
+            android:textSize="15sp"
+            />
+
+        <TextView
+            android:id="@+id/pvirus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/text_margin"
+            android:text="@string/virus"
+            android:textSize="15sp"
+            />
+
+        <TextView
+            android:id="@+id/storify"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/text_margin"
+            android:text="@string/title_storify"
+            android:textSize="15sp"
+           />
+
+        <TextView
+            android:id="@+id/pstorify"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/text_margin"
+            android:text="@string/storify"
+            android:textSize="15sp"
+            />
+
+
+
+    </LinearLayout>
+
+
+
+</android.support.v4.widget.NestedScrollView>

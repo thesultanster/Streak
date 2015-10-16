@@ -25,6 +25,11 @@
             android:label="@string/title_activity_pipeline"
             android:theme="@style/AppTheme" >
         </activity>
+        <activity
+            android:name=".ViewMail"
+            android:label="@string/title_activity_view_mail"
+            android:theme="@style/AppTheme" >
+        </activity>
     </application>
 
 </manifest>

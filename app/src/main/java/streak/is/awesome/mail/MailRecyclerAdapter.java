@@ -13,6 +13,7 @@ import java.util.Collections;
 import java.util.List;
 
 import streak.is.awesome.R;
+import streak.is.awesome.ViewMail;
 
 /**
  * Created by sultankhan on 10/14/15.
@@ -48,6 +49,9 @@ public class MailRecyclerAdapter extends RecyclerView.Adapter<MailRecyclerAdapte
         final View view = inflator.inflate(R.layout.row_mail_recycler_view, parent, false);
         MyViewHolder holder = new MyViewHolder(view, new MyViewHolder.MyViewHolderClicks() {
             public void RowClick(View caller, int position) {
+
+                Intent intent = new Intent(context, ViewMail.class);
+                context.startActivity(intent);
 
             }
 
