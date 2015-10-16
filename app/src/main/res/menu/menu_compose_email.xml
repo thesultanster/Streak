@@ -1,0 +1,28 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+
+  >
+
+    <item android:id="@+id/action_snooze_email"
+        android:icon="@drawable/ic_snooze_white_18dp"
+        android:title="Send Email"
+        app:showAsAction="always"
+        android:orderInCategory="1"
+        android:menuCategory="secondary"/>
+
+    <item android:id="@+id/action_send_later"
+        android:icon="@drawable/ic_access_alarm_white_18dp"
+        android:title="Send Later"
+        app:showAsAction="always"
+        android:orderInCategory="2"
+        android:menuCategory="secondary"/>
+
+    <item android:id="@+id/action_send_email"
+        android:icon="@drawable/ic_send_white_18dp"
+        android:title="Send Email"
+        app:showAsAction="always"
+        android:orderInCategory="3"
+        android:menuCategory="secondary"/>
+
+
+</menu>

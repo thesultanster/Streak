@@ -1,0 +1,57 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- group with single selected item so only one item is highlighted in the nav menu -->
+    <group android:checkableBehavior="single">
+
+
+        <item
+            android:id="@+id/inbox_subheader"
+            android:title="Inbox">
+            <menu>
+                <item
+                    android:id="@+id/inbox"
+                    android:icon="@drawable/fab_background"
+                    android:title="Inbox"/>
+
+                <item
+                    android:id="@+id/draft"
+                    android:icon="@drawable/fab_background"
+                    android:title="Drafts"/>
+            </menu>
+        </item>
+
+        <item
+            android:id="@+id/sent_subheader"
+            android:title="Sent Mail">
+            <menu>
+                <item
+                    android:id="@+id/recently_viewed"
+                    android:icon="@drawable/fab_background"
+                    android:title="Recently Viewed"/>
+                <item
+                    android:id="@+id/all_tracked_emails"
+                    android:icon="@drawable/fab_background"
+                    android:title="All Tracked Emails"/>
+                <item
+                    android:id="@+id/awaiting_reply"
+                    android:icon="@drawable/fab_background"
+                    android:title="Awaiting Reply"/>
+            </menu>
+        </item>
+
+        <item
+            android:id="@+id/pipeline_subheader"
+            android:title="Pipeline">
+            <menu>
+                <item
+                    android:id="@+id/sales"
+                    android:icon="@drawable/fab_background"
+                    android:title="Sales/CRM"/>
+                <item
+                    android:id="@+id/investors"
+                    android:icon="@drawable/fab_background"
+                    android:title="Investors"/>
+            </menu>
+        </item>
+
+    </group>
+</menu>
