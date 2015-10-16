@@ -28,7 +28,7 @@
             android:background="?attr/colorPrimary"
             android:minHeight="?attr/actionBarSize"
             android:theme="@style/AppTheme.Dark"
-            app:layout_scrollFlags="scroll|enterAlways" />
+            />
 
         <streak.is.awesome.util.SlidingTabLayout
             android:id="@+id/tab"
