@@ -49,6 +49,19 @@ public class Mail extends NavigationDrawerFramework {
         adapter.addRow(new MailRecyclerInfo("me, Streak", "Streak Android Position", "Show us how serious you are for this position"));
         adapter.addRow(new MailRecyclerInfo("me, Streak", "Streak Android Position", "Show us how serious you are for this position"));
         adapter.addRow(new MailRecyclerInfo("me, Streak", "Streak Android Position", "Show us how serious you are for this position"));
+        adapter.addRow(new MailRecyclerInfo("me, Streak", "Streak Android Position", "Show us how serious you are for this position"));
+        adapter.addRow(new MailRecyclerInfo("me, Streak", "Streak Android Position", "Show us how serious you are for this position"));
+        adapter.addRow(new MailRecyclerInfo("me, Streak", "Streak Android Position", "Show us how serious you are for this position"));
+        adapter.addRow(new MailRecyclerInfo("me, Streak", "Streak Android Position", "Show us how serious you are for this position"));
+        adapter.addRow(new MailRecyclerInfo("me, Streak", "Streak Android Position", "Show us how serious you are for this position"));
+        adapter.addRow(new MailRecyclerInfo("me, Streak", "Streak Android Position", "Show us how serious you are for this position"));
+        adapter.addRow(new MailRecyclerInfo("me, Streak", "Streak Android Position", "Show us how serious you are for this position"));
+        adapter.addRow(new MailRecyclerInfo("me, Streak", "Streak Android Position", "Show us how serious you are for this position"));
+        adapter.addRow(new MailRecyclerInfo("me, Streak", "Streak Android Position", "Show us how serious you are for this position"));
+        adapter.addRow(new MailRecyclerInfo("me, Streak", "Streak Android Position", "Show us how serious you are for this position"));
+        adapter.addRow(new MailRecyclerInfo("me, Streak", "Streak Android Position", "Show us how serious you are for this position"));
+        adapter.addRow(new MailRecyclerInfo("me, Streak", "Streak Android Position", "Show us how serious you are for this position"));
+
 
 
         fab.setOnClickListener(new View.OnClickListener() {
